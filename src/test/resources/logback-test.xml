@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.apache.http" level="ERROR"/>
+    <logger name="org.apache.http.wire" level="ERROR"/>
+    <logger name="org.apache.http.headers" level="ERROR"/>
+    <logger name="software.amazon.awssdk" level="ERROR"/>
+    <logger name="software.amazon.awssdk.request" level="ERROR"/>
+    <logger name="software.amazon.awssdk.requestId" level="ERROR"/>
+    <logger name="software.amazon.awssdk.auth" level="ERROR"/>
+    <logger name="software.amazon.awssdk.core" level="ERROR"/>
+    
+    <logger name="com.testsuite" level="INFO"/>
+
+    <logger name="org.testng" level="INFO"/>
+    
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
